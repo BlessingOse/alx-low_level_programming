@@ -4,28 +4,30 @@
  * main - it all starts here
  *
  * Return: to return 0
- */
-
+ *
+ **/
 int main(void)
 {
+	int i, j;
 
-	int m;
-	int n;
-
-	for (m = 0 ; m <= 98 ; m++)
+	for (i = 0; i < 100; i++)
 	{
-		for (n = m + 1 ; n <= 99 ; n++)
+		for (j = 0; j < 100; j++)
 		{
-			putchar((m / 10) + '0');
-			putchar((m % 10) + '0');
-			putchar(' ');
-			putchar((n / 10) + '0');
-			putchar((n % 10) + '0');
-			if (m == 98 && n == 99)
+			if (i < j)
 			{
-				putchar(',');
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
 				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
+
 		}
 	}
 	putchar('\n');
