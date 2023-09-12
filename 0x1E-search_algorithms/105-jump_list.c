@@ -28,7 +28,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		k++;
 		index = k * m;
 
-		while (list->next && list->ind < index)
+		while (list->next && list->index < index)
 			list = list->next;
 
 		if (list->next == NULL && index != list->index)
